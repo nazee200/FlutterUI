@@ -1,10 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:nikeshow/app/modules/home/controllers/home_controller.dart';
 import 'package:nikeshow/app/widget/BottomCardWidget.dart';
 
 class Homenavigationbar extends StatelessWidget {
   @override
   Widget build(context) {
+    HomeController homeController = new HomeController();
     return Container(
       height: 65,
       padding: const EdgeInsets.symmetric(horizontal: 15),
@@ -19,6 +21,7 @@ class Homenavigationbar extends StatelessWidget {
               showBottomSheet(
                   context: context,
                   builder: (context) {
+                    homeController.bottombarvisible = 1;
                     return BottomCardWidget();
                   });
             },

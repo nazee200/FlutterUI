@@ -11,6 +11,7 @@ class HomeView extends GetView<HomeController> {
   const HomeView({super.key});
   @override
   Widget build(BuildContext context) {
+    HomeController controller = new HomeController();
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(15),
